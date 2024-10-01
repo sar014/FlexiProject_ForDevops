@@ -7,8 +7,10 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import { AboutUs } from './Components/AboutUs';
 import { News } from './Components/News';
-import { Login } from './Components/Login/Login';
-import { Register } from './Components/Login/Regsiter';
+// import { Login } from './Components/Login/Login';
+import  Login  from './frontend/Login';
+import  Register  from './frontend/register';
+
 
 function App() {
   return (
