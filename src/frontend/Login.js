@@ -45,14 +45,14 @@ const Login = () => {
             name="username"
             rules={[{ required: true, message: 'Please enter your username!' }]}
           >
-            <Input prefix={<UserOutlined />} placeholder="Username" />
+            <Input name="username" prefix={<UserOutlined />} placeholder="Username" />
           </Form.Item>
 
           <Form.Item
             name="password"
             rules={[{ required: true, message: 'Please enter your password!' }]}
           >
-            <Input.Password prefix={<LockOutlined />} placeholder="Password" />
+            <Input.Password name="password" prefix={<LockOutlined />} placeholder="Password" />
           </Form.Item>
 
           <Form.Item>

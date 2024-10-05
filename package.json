@@ -11,6 +11,7 @@
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
+    "chromedriver": "^129.0.1",
     "cors": "^2.8.5",
     "ejs": "^3.1.9",
     "express": "^4.19.2",
@@ -23,6 +24,7 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "^5.0.1",
     "reactstrap": "^9.2.2",
+    "selenium-webdriver": "^4.25.0",
     "sqlite3": "^5.1.7",
     "web-vitals": "^2.1.4"
   },
@@ -51,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3"
   }
 }
