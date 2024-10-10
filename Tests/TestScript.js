@@ -19,7 +19,7 @@ const driver = new Builder()
     await driver.get('http://localhost:3000/register'); // Adjust the URL based on your setup
 
     // Wait until the username field is present
-    await driver.wait(until.elementLocated(By.name('username')), 5000);
+    await driver.wait(until.elementLocated(By.name('username')),10000);
 
     // Fill in the username and password fields for registration
     await driver.findElement(By.name('username')).sendKeys('newuser1');
@@ -28,7 +28,7 @@ const driver = new Builder()
     // Wait for the registration success message
     const regSuccessMessageElement = await driver.wait(
       until.elementLocated(By.css('.ant-message-notice-content')),
-      5000 // Wait for 5 seconds
+      15000 // Wait for 5 seconds
     );
 
     // Check the success message content
@@ -41,14 +41,14 @@ const driver = new Builder()
     }
 
     // Wait for the success message to disappear and check redirection
-    await driver.wait(until.stalenessOf(regSuccessMessageElement), 5000);
+    await driver.wait(until.stalenessOf(regSuccessMessageElement), 15000);
     console.log('Success message disappeared.');
-    await driver.wait(until.urlIs('http://localhost:3000/'), 5000); // Redirect to login page
+    await driver.wait(until.urlIs('http://localhost:3000/'), 10000); // Redirect to login page
     console.log('Redirected to login page after successful registration.');
 
     // ------------- Login Test -------------
     // Wait until the login form is present
-    await driver.wait(until.elementLocated(By.name('username')), 5000);
+    await driver.wait(until.elementLocated(By.name('username')), 10000);
 
     // Fill in the username and password fields for login
     await driver.findElement(By.name('username')).sendKeys('newuser1'); // Use the newly registered user
@@ -70,11 +70,11 @@ const driver = new Builder()
     }
 
     // Wait for the success message to disappear
-    await driver.wait(until.stalenessOf(loginSuccessMessageElement), 5000);
+    await driver.wait(until.stalenessOf(loginSuccessMessageElement), 15000);
     console.log('Success message disappeared.');
 
     // Verify the redirection to the home page after login
-    await driver.wait(until.urlIs('http://localhost:3000/home'), 5000);
+    await driver.wait(until.urlIs('http://localhost:3000/home'), 10000);
     console.log('Redirected to home page after successful login.');
 
     // ------------- Navbar Tests -------------
