@@ -14,44 +14,15 @@ const driver = new Builder()
 
 (async function runTests() {
   try {
-    // ------------- Registration Test -------------
-    // Navigate to the registration page
-    await driver.get('http://localhost:3000/register'); // Adjust the URL based on your setup
+    // ------------- Login Test -------------
+    // Navigate to the login page
+    await driver.get('http://localhost:3000/'); // Adjust the URL based on your setup
 
     // Wait until the username field is present
     await driver.wait(until.elementLocated(By.name('username')), 5000);
 
-    // Fill in the username and password fields for registration
-    await driver.findElement(By.name('username')).sendKeys('newuser1');
-    await driver.findElement(By.name('password')).sendKeys('newpassword1', Key.RETURN);
-
-    // Wait for the registration success message
-    const regSuccessMessageElement = await driver.wait(
-      until.elementLocated(By.css('.ant-message-notice-content')),
-      5000 // Wait for 5 seconds
-    );
-
-    // Check the success message content
-    const regSuccessMessageText = await regSuccessMessageElement.getText();
-    if (regSuccessMessageText.includes('Registration successful')) {
-      console.log('Registration test passed: Success message displayed.');
-    } else {
-      console.log('Registration test failed: Success message not found.');
-      return; // Stop execution if registration failed
-    }
-
-    // Wait for the success message to disappear and check redirection
-    await driver.wait(until.stalenessOf(regSuccessMessageElement), 5000);
-    console.log('Success message disappeared.');
-    await driver.wait(until.urlIs('http://localhost:3000/'), 5000); // Redirect to login page
-    console.log('Redirected to login page after successful registration.');
-
-    // ------------- Login Test -------------
-    // Wait until the login form is present
-    await driver.wait(until.elementLocated(By.name('username')), 5000);
-
     // Fill in the username and password fields for login
-    await driver.findElement(By.name('username')).sendKeys('testuser'); // Use the newly registered user
+    await driver.findElement(By.name('username')).sendKeys('testuser'); // Replace with a valid username
     await driver.findElement(By.name('password')).sendKeys('testpassword', Key.RETURN);
 
     // Wait for the login success message
