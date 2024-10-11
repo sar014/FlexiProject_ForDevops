@@ -51,8 +51,8 @@ const driver = new Builder()
     await driver.wait(until.elementLocated(By.name('username')), 5000);
 
     // Fill in the username and password fields for login
-    await driver.findElement(By.name('username')).sendKeys('newuser1'); // Use the newly registered user
-    await driver.findElement(By.name('password')).sendKeys('newpassword1', Key.RETURN);
+    await driver.findElement(By.name('username')).sendKeys('testuser'); // Use the newly registered user
+    await driver.findElement(By.name('password')).sendKeys('testpassword', Key.RETURN);
 
     // Wait for the login success message
     const loginSuccessMessageElement = await driver.wait(
