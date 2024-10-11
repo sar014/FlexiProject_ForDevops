@@ -16,13 +16,13 @@ const driver = new Builder()
   try {
     // ------------- Login Test -------------
     // Navigate to the login page
-    await driver.get('http://localhost:3000/'); // Adjust the URL based on your setup
+    await driver.get('http://localhost:3000/'); 
 
     // Wait until the username field is present
     await driver.wait(until.elementLocated(By.name('username')), 5000);
 
     // Fill in the username and password fields for login
-    await driver.findElement(By.name('username')).sendKeys('testuser'); // Replace with a valid username
+    await driver.findElement(By.name('username')).sendKeys('testuser'); 
     await driver.findElement(By.name('password')).sendKeys('testpassword', Key.RETURN);
 
     // Wait for the login success message
