@@ -3,7 +3,7 @@ const chrome = require('selenium-webdriver/chrome');
 
 // Set up Chrome browser in headless mode
 const options = new chrome.Options();
-options.addArguments('--headless');
+// options.addArguments('--headless');
 options.addArguments('--disable-gpu');
 
 // Create a new WebDriver instance
