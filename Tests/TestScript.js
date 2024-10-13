@@ -49,7 +49,6 @@ const driver = new Builder()
 
     // Check if "Gamer's World" is present in the navbar brand
     const navbarBrand = await driver.findElement(By.className('navbar-brand'));
-    const brandText = await navbarBrand.getText();
 
     // Check if the "Home" link is present and clickable
     const homeLink = await driver.findElement(By.linkText('Home'));

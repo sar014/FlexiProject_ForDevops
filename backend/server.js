@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use(bodyParser.json()); 
 
-mongoose.connect('mongodb://localhost:27017/mern_login', { 
+mongoose.connect('mongodb://host.docker.internal:27017/mern_login', { 
 
     useNewUrlParser: true, 
 
