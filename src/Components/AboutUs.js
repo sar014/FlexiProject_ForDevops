@@ -69,7 +69,7 @@ export const AboutUs = () => {
         <div className="img-container">
           <img src={profile1} />
         </div>
-        <h3>Omar</h3>
+        <h3>Sanaa</h3>
         <p>Developer</p>
         <div className="icons">
           <a href="#">
@@ -94,7 +94,7 @@ export const AboutUs = () => {
         <div className="img-container">
           <img src={profile3} />
         </div>
-        <h3>Saylee</h3>
+        <h3>Pratham</h3>
         <p>Designer</p>
         <div className="icons">
           <a href="#">
