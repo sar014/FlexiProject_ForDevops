@@ -5,6 +5,9 @@ const chrome = require('selenium-webdriver/chrome');
 const options = new chrome.Options();
 // options.addArguments('--headless');
 options.addArguments('--disable-gpu');
+options.addArguments('--headless');
+options.addArguments('--no-sandbox');
+options.addArguments('--disable-dev-shm-usage');
 
 // Create a new WebDriver instance
 const driver = new Builder()
