@@ -6,7 +6,7 @@ yarn-error.log*
 # Ignore local environment files
 .env
 .env.local
-.env.*   # In case you have environment-specific files, e.g., .env.production
+.env.*   
 
 # Ignore version control and config files
 .git/
