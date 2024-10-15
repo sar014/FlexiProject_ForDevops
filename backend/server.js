@@ -14,13 +14,13 @@ app.use(cors());
 
 app.use(bodyParser.json()); 
 
-mongoose.connect('mongodb://host.docker.internal:27017/mern_login', { 
+const mongoURI = process.env.MONGO_URI || 'mongodb://host.docker.internal:27017/mern_login';
 
+mongoose.connect(mongoURI, { 
     useNewUrlParser: true, 
-
     useUnifiedTopology: true, 
-
 }); 
+
 
 app.use('/api/auth', authRoutes); 
 
