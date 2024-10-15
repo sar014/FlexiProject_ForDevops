@@ -1,9 +1,7 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 
-// Set up Chrome browser in headless mode
 const options = new chrome.Options();
-// options.addArguments('--headless');
 options.addArguments('--disable-gpu');
 options.addArguments('--headless');
 options.addArguments('--no-sandbox');
