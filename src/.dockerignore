@@ -1,15 +1,15 @@
-# Ignore node modules and logs
 node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Ignore local environment files
 .env
 .env.local
+.env.*   # In case you have environment-specific files, e.g., .env.production
 
 # Ignore version control and config files
-.git
+.git/
 .gitignore
 .vscode/
 .idea/
@@ -18,7 +18,6 @@ yarn-error.log
 dist/
 build/
 
-# Ignore OS and editor-specific files
+# Ignore temporary files from editors or OS
 .DS_Store
 Thumbs.db
-
